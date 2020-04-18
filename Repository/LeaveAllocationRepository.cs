@@ -40,9 +40,10 @@ namespace Leave_Management.Repository
             return LeaveAllocation;
         }
 
-        public ICollection<LeaveType> GetEmployeesByLeaveAllocation(int id)
+        public bool isExists(int id)
         {
-            throw new NotImplementedException();
+            var exists = _db.LeaveAllocations.Any(q => q.Id == id);
+            return exists;
         }
 
         public bool Save()

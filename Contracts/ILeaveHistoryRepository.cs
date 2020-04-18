@@ -8,6 +8,5 @@ namespace Leave_Management.Contracts
 {
     public interface ILeaveHistoryRepository : IRepositoryBase<LeaveHistory>
     {
-        ICollection<LeaveHistory> GetEmployeesByLeaveHistory(int id);
     }
 }

@@ -40,9 +40,10 @@ namespace Leave_Management.Repository
             return LeaveHistory;
         }
 
-        public ICollection<LeaveHistory> GetEmployeesByLeaveHistory(int id)
+        public bool isExists(int id)
         {
-            throw new NotImplementedException();
+            var exists = _db.LeaveHistories.Any(q => q.Id == id);
+            return exists;
         }
 
         public bool Save()
